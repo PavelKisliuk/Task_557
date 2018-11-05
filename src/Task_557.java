@@ -25,11 +25,11 @@ public class Task_557 {
 		private ArrayList<Integer> currentString;
 		private int soughtElement;
 		//-----------------------------------------------------------------------------
-		/*public*/ SquareMatrix(String path)
+		/*public*/ SquareMatrix(final String path)
 		{
 
 			this.currentString = new ArrayList<>();
-			try(BufferedReader input = new BufferedReader (new FileReader(path))) {
+			try(final BufferedReader input = new BufferedReader (new FileReader(path))) {
 				//-----------------------------------------------------------------------------
 				if(input.ready()) {
 					//-----------------------------------------------------------------------------
@@ -104,7 +104,7 @@ public class Task_557 {
 			this("INPUT.TXT");
 		}
 		//-----------------------------------------------------------------------------methods for constructors
-		private boolean isCorrectQuantityAndSize(String s)
+		private boolean isCorrectQuantityAndSize(final String s)
 		{
 			if(s.matches("[1-9]+\\d* [1-9]+\\d*")) {
 				for(String token : s.split(" ")) {
@@ -116,7 +116,7 @@ public class Task_557 {
 			return false;
 		}
 
-		private boolean isCorrectRowAndColumn(String s)
+		private boolean isCorrectRowAndColumn(final String s)
 		{
 			if(s.matches("[1-9]+\\d* [1-9]+\\d*")) {
 				for(String token : s.split(" ")) {
@@ -128,12 +128,12 @@ public class Task_557 {
 			return false;
 		}
 
-		private boolean isCorrectNumber(String s)
+		private boolean isCorrectNumber(final String s)
 		{
 			return ((s.matches("[1-9]+\\d*")) && (Integer.valueOf(s) <= 1000));
 		}
 
-		private boolean isCorrectString(String s)
+		private boolean isCorrectString(final String s)
 		{
 			for(String token : s.split(" ")) {
 				if(token.matches("[1-9]+\\d*")) {
@@ -157,7 +157,7 @@ public class Task_557 {
 		private int matrix[][];
 		private int size;
 		//-----------------------------------------------------------------------------constructors
-		/*public*/ Matrix(BufferedReader input, final int size, final int module) {
+		/*public*/ Matrix(final BufferedReader input, final int size, final int module) {
 			try {
 				//-----------------------------------------------------------------------------
 				this.size = size;
@@ -183,7 +183,7 @@ public class Task_557 {
 			}
 		}
 		//-----------------------------------------------------------------------------methods for constructors
-		private boolean isCorrectString(String s, int module)
+		private boolean isCorrectString(final String s, final int module)
 		{
 			for(String token : s.split(" ")) {
 				if(token.matches("[1-9]+\\d*")) {
